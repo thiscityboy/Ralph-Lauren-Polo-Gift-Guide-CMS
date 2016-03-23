@@ -7,9 +7,58 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
 
-<%= yield %>
+<body class="cbp-spmenu-push">
+
+	<%= render "guide/navbar" %> 
+
+	<header>
+		<div id="showLeftPush" class="menu-icon"><%= image_tag('menu-icon.png') %></div>
+
+	
+	</header>
+
+
+		<%= yield %>
+
+	<footer>
+		<%= render "guide/footer" %>
+	</footer>
+
+<script>
+
+</script>
+
+<script>
+	var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
+		showLeftPush = document.getElementById( 'showLeftPush' ),
+		body = document.body;
+
+	showLeftPush.onclick = function() {
+		classie.toggle( this, 'active' );
+		classie.toggle( body, 'cbp-spmenu-push-toright' );
+		classie.toggle( menuLeft, 'cbp-spmenu-open' );
+		disableOther( 'showLeftPush' );
+	};
+
+	function disableOther( button ) {
+		if( button !== 'showLeftPush' ) {
+			classie.toggle( showLeftPush, 'disabled' );
+		}
+		if( button !== 'showRightPush' ) {
+			classie.toggle( showRightPush, 'disabled' );
+		}
+	}
+
+	var swiper = new Swiper('.swiper-container', {
+	    pagination: '.swiper-pagination',
+	    paginationClickable: true,
+	    loop: true,
+	    autoplay: 150000
+	 });	
+</script>
+
+		
 
 </body>
 </html>

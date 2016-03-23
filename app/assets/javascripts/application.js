@@ -13,5 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 
+//= require classie
+//= require modernizr.custom
+//= require swiper
 //= require bootstrap
 //= require_tree .
+

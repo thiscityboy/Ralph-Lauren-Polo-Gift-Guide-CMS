@@ -11,7 +11,13 @@
  * file per style scope.
  *
  *= require bootstrap
+ *= require swiper
+ *= require navigation
  *= require font-awesome
  *= require_tree .
  *= require_self
  */
+
+
+
+
