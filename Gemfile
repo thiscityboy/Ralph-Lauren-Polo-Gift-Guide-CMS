@@ -9,7 +9,6 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'rails_admin'
 gem 'paperclip'
-gem 'msg_toolbox', source: 'https://repo.fury.io/svdEKiyaqdZ1xhagHajp/me/'
 gem 'font-awesome-rails'
 
 group :development, :test do
